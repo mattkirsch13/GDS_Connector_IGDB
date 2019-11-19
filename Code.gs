@@ -133,7 +133,7 @@ function getSchema(request) {
   
   var responseString = UrlFetchApp.fetch(url, {
       headers: {
-        'user-key': '6f0f63ec2a0fff5341e28189a9530efc',
+        'user-key': 'add user-key here',
         'Accept': 'application/json'
       }, method: 'post',
     payload: 'fields name,parent_game,rating,first_release_date; sort rating desc; where first_release_date > 1573010079 & rating > 0;',
@@ -168,7 +168,7 @@ function addOtherFields(responseString, otherEndpointFields, requestedFields){
     
        var newResponseString = UrlFetchApp.fetch(url, {
          headers: {
-           'user-key': '6f0f63ec2a0fff5341e28189a9530efc',
+           'user-key': 'add user-key here',
            'Accept': 'application/json'
          }, method: 'post',
          payload: 'fields url; where game = ' + response[i].id + ';',
@@ -247,7 +247,7 @@ function fetchDataFromApi(request, requestedFields) {
   //make HTTP query
   var responseString = UrlFetchApp.fetch(url, {
       headers: {
-        'user-key': '6f0f63ec2a0fff5341e28189a9530efc',
+        'user-key': 'add user-key here',
         'Accept': 'application/json'
       }, method: 'post',
     payload: load,
